@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+</head>
+<body>
+    <p>
+         <h3>Get Grade</h3>
+         <input type="number" id="marksInput" placeholder="Enter marks">
+         <button onclick="outputGrade()">Convert to Grade</button>
+         <p id="gradeDisplay"></p>
+    </p>
+
+    <p>
+       <h3>Speed Detector</h3>
+       <input type="number" id="speedInput" placeholder="Enter speed">
+       <button onclick="speedDetect()">Detect Speed</button>
+       <p id="speedDisplay" ></p>
+    </p>
+
+    <p>
+        <h3>Net Salary Calculator</h3>
+        <input type="number" id="basicSalaryInput" placeholder="Enter you Basic salary">
+        <input type="number" id="benefitsInput" placeholder="Enter your benefits">
+        <button onclick="calculate()">Calculate Net Salary</button>
+        <p id="salaryDisplay"></p>
+    </p>
+
+
+
+
+
+
+    
+</body>
+   <!--DOM needs to be fully loaded before JS starts hence this positioning-->
     <script src="studentGrade.js"></script>
     <script src="netSalary.js"></script>
     <script src="speedDetector.js"></script>
-</head>
-<body>
-    
-</body>
 </html>

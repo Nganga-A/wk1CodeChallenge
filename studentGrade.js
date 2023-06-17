@@ -1,10 +1,15 @@
-const marks=14;
-let errorMessage="";
-let grade;
+const marksInput = document.getElementById('marksInput'); //input element
 
-if (marks < 0 || marks > 100){
-   errorMessage ='Enter Valid marks';
-} else {
+function outputGrade(){
+    let errorMessage="";
+    const gradeDisplay = document.getElementById('gradeDisplay'); //output HTML element
+    let grade;
+    const marks = parseFloat(marksInput.value); //get value from input field
+
+
+     if (isNaN(marks) || marks < 0 || marks > 100){ //not a number or less than or greater than 0
+         errorMessage ='Enter Valid marks';
+     } else {
         if (marks > 79) {
             grade = "A";
         } else if (marks >= 60 && marks <= 79) {
@@ -18,12 +23,12 @@ if (marks < 0 || marks > 100){
         }
     }
 
-function outputGrade(){
-if (errorMessage.length ===0) {
-    console.log(grade);
-} else {
-    console.log(errorMessage);
-};
+    if (errorMessage.length === 0) {
+        gradeDisplay.textContent = 'Grade: ' + grade;
+    } else {
+        gradeDisplay.textContent = errorMessage;
+        }
+
 };
 
-outputGrade();
+
